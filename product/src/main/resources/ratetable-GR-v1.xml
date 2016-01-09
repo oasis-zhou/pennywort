@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ratetable name="" code="" version="">
+	<effDate>2015-01-01 00:00:00</effDate>
+	<expDate>2016-01-01 00:00:00</expDate>
+	<valid>true</valid>
+	<desc>Goods return coverage rate</desc>
+
+	<rateitems>
+		<item>
+			<factor name="" isScope="false"></factor>
+			<factor name="" isScope="true">
+				<maxValue></maxValue>
+				<minValue></minValue>
+			</factor>
+			<ratevalue name="value1"></ratevalue>
+			<ratevalue name="value2"></ratevalue>
+		</item>
+	</rateitems>
+</ratetable>

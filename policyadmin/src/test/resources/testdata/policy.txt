@@ -1,0 +1,40 @@
+{
+    "typeName": "GRPolicy",
+    "channelId": "TAOBAO",
+    "effectiveDate": "2015-01-01 00:00:00",
+    "expiredDate": "2016-12-31 00:00:00",
+    "fee": {
+        "refBusinessObjName": "GRPolicy",
+        "refBusinessObjUid": "cf163f4038a64b4aaf45fe83451aa03b"
+    },
+    "insured": {
+        "typeName": "GRInsured",
+        "coverages": [
+            {
+                "code": "GRC",
+                "coverageId": "GRC",
+                "fee": {
+                    "refBusinessObjName": "Coverage",
+                    "refBusinessObjUid": "5c643587530d4d31b2c81784a56ffd0f"
+                },
+                "limit": {
+                    "indemnityType": "AOA",
+                    "limitAmount": 9,
+                    "pattern": "${limitAmount}",
+                    "uuid": "3284deb2aeae4b2ba7c113f2450c356a"
+                },
+                "status": "EFFECTIVE",
+                "uuid": "5c643587530d4d31b2c81784a56ffd0f"
+            }
+        ],
+        "fee": {
+            "refBusinessObjName": "GRInsured",
+            "refBusinessObjUid": "c0f525e13e3145c3b50b50a7792bb798"
+        },
+        "insuredCategory": 9,
+        "status": "EFFECTIVE",
+        "uuid": "c0f525e13e3145c3b50b50a7792bb798"
+    },
+    "productId": "GR:1",
+    "uuid": "cf163f4038a64b4aaf45fe83451aa03b"
+}

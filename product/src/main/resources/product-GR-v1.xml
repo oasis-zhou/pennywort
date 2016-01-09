@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product uuid="GR:1" name="Goods Return" code="GR" version="1">
+
+	<effDate>2015-01-01 00:00:00</effDate>
+	<expDate>2016-01-01 00:00:00</expDate>
+	<valid>true</valid>
+	<desc>Goods return for TaoBao</desc>
+
+	<tags>
+		<tag name="channel">TaoBao</tag>
+	</tags>
+
+	<insured>
+		<cate>9</cate>
+		<formulas>
+			<formula uuid="test" name="test" aim="TAX_FEE" resultName="i-fee">
+				<factors></factors>
+				<body><![CDATA[ ]]></body>
+			</formula>
+		</formulas>
+		<tags>
+			<tag name="test">test</tag>
+		</tags>
+	</insured>
+
+	<coverages>
+		<coverage uuid="GRC" name="Goods Return Coverage" code="GRC">
+			<desc>Goods Return Coverage</desc>
+
+			<limit>
+				<indemnityType>AOA</indemnityType>
+				<pattern>${limitAmount}</pattern>
+				<value>9.00</value>
+			</limit>
+			<Deductible>
+				<pattern></pattern>
+				<value></value>
+			</Deductible>
+
+			<formulas>
+				<formula uuid="F-GRC" name="goods return coverage formula" aim="GROSS-PREMIUM">
+					<factors>limit_limitAmount</factors>
+					<body><![CDATA[ x = limit_limitAmount * 0.1; return ['SGP':x,'AGP':x,'SNP':x,'ANP':x]; ]]></body>
+				</formula>
+			</formulas>
+
+			<tags>
+				<tag name="test">test</tag>
+			</tags>
+		</coverage>
+	</coverages>
+
+	<rulesets>
+		<ruleset uuid="test" name="test">
+			<rule uuid="test" name="test">
+				<factors></factors>
+				<body><![CDATA[ ]]></body>
+			</rule>
+		</ruleset>
+	</rulesets>
+
+	<formulas>
+		<formula uuid="F-ADMIN-FEE"/>	
+		<formula uuid="F-COMMISSION"/>
+	</formulas>
+</product>

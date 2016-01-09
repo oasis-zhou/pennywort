@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formulas>
+	<formula uuid="F-ADMIN-FEE" name="adming fee formula" aim="TAX-FEE">
+		<factors>PREMIUM_ANP</factors>
+		<body><![CDATA[ x = PREMIUM_ANP * 0.5; return ['ADMINFEE':x]; ]]></body>
+	</formula>
+
+	<formula uuid="F-COMMISSION" name="commission formula" aim="COMMISSION">
+		<factors>PREMIUM_ANP,COMMISSION_RATE</factors>
+		<body><![CDATA[ x = PREMIUM_ANP * COMMISSION_RATE; return ['COMMISSION':x]; ]]></body>
+	</formula>
+
+	<formula uuid="F-CANCELLATION" name="cancellation endorsement formula" aim="ADD_REFUND_PREMIUM">
+		<factors>ORIGINAL_FEE_ANP</factors>
+		<body><![CDATA[ x = ORIGINAL_FEE_ANP * 0.5; return ['ANP':-x]; ]]></body>
+	</formula>
+
+	<formula uuid="F-BASICINFO" name="basic info endorsement formula" aim="ADD_REFUND_PREMIUM">
+		<factors>ORIGINAL_FEE_ANP,NEW_FEE_ANP</factors>
+		<body><![CDATA[ x = NEW_FEE_ANP - ORIGINAL_FEE_ANP; return ['ANP':x]; ]]></body>
+	</formula>
+</formulas>

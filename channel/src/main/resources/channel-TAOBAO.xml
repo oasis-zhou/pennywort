@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel uuid="TAOBAO" name="Taobao" code="TAOBAO">
+	<phone>999</phone>
+	<fax>998</fax>
+	<mail>taobao@taobao.com.cn</mail>
+	<desc>taobao</desc>
+
+	<onlie-offline online="true" offline="false"></onlie-offline>
+
+	<!-- channel's ability to sale product line 
+		product line:
+		Liability  
+		PersonAccident 
+	
+	-->
+	<product-ability>Liability,PersonAccident</product-ability>
+	
+	<!-- channel's ability for customer to provide insurance service 
+		service:
+		Quotation 
+		IssuePolicy 
+		Claim 
+	-->
+	<service-ability>Quotation,IssuePolicy,Claim</service-ability>
+
+	<agreements>
+		<agreement uuid="A-GR" name="Goods Return">
+			<effDate>2015-05-01 00:00:00</effDate>
+			<expDate>2016-05-01 00:00:00</expDate>
+			<desc>Goods return sales agreement</desc>
+			
+			<product>GR:1</product>	
+			<!-- channel and insurance company settlement for premium -->
+			<settlement>Alipay</settlement>
+			<!-- calType="FixAmount/Rate" realTime="true/false" -->
+			<commission calType="Rate" realTime="true">0.05</commission>
+			<!-- the specific service for one agreement -->
+			<service>Quotation,IssuePolicy</service>		
+		</agreement>
+	</agreements>
+	
+	<!-- the platform and channel system integration related -->
+	<integration>
+	
+	</integration>
+	
+</channel>
