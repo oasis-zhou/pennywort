@@ -12,76 +12,21 @@ import javax.validation.constraints.Past;
 
 public class Claim {
 
-	/**
-	 * Claim ID(PK)
-	 */
 	private Long claimId;
-	/**
-	 * 理赔号
-	 */
 	private String claimNumber;
-	/**
-	 *产品代码
-	 */
 	private String productCode;
-	/**
-	 * 状态(1:Open/2:Reopen/3:Reject/9:Close)
-	 */
 	private String status;
-	/**
-	 * 保单号
-	 */
-	@NotNull(message="保单号为空")
 	private String policyNumber;
-	/**
-	 * 出险时间
-	 */
-	@NotNull(message="出险时间为空")
-	@Past(message="出险时间不能晚于当前时间")
 	private Date accidentTime;
-	/**
-	 * 理赔申请时间
-	 */
-	@NotNull(message="申赔时间为空")
 	private Date claimTime;
-	
-//	@NotNull(message="出险原因为空")
 	private String accidentCause;
-	/**
-	 * 事故描述
-	 */
 	private String accidentDescription;
-	/**
-	 * 业务数据
-	 */
 	private Map<String, Object> businessContent;
-	/**
-	 * 渠道业务号码
-	 */
 	private String referenceNumber;
-	/**
-	 * 是否有追偿
-	 */
 	private String isSubrogation;
-	/**
-	 * 索赔人信息
-	 */
-	@NotNull(message="索赔人信息为空")
-	@Valid
 	private ClaimParty claimant;
-	/**
-	 * 理赔项目信息
-	 */
-	@NotNull(message="理赔项目信息为空")
-	@Valid
 	private List<ClaimItem> claimItems;
-	/**
-	 * 赔款信息
-	 */
 	private List<ClaimSettlement> claimSettlements;
-	/**
-	 * 追偿信息
-	 */
 	private List<ClaimSubrogation> claimSubrogations;
 
 	public Long getClaimId() {

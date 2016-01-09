@@ -8,47 +8,14 @@ import javax.validation.constraints.NotNull;
 
 
 public class ClaimItem {
-	/**
-	 * Claim Item ID(PK)
-	 */	
 	private Long itemId;
-	/**
-	 * indemnityAmount=reserveAmount + paymentAmount - subrogationAmount
-	 * 赔偿总额
-	 */
 	private BigDecimal indemnityAmount;
-	/**
-	 * payment amount of loss indemnity
-	 * 赔款
-	 */
 	private BigDecimal paymentAmount;
-	/**
-	 * outstanding reserve amount
-	 * 准备金
-	 */
 	private BigDecimal reserveAmount;
-	/**
-	 * subrogation amount
-	 * 追偿款
-	 */
 	private BigDecimal subrogationAmount;
-	/**
-	 * Coverage UUID
-	 */
 	private String coverageId;
-	/**
-	 * Coverage Name
-	 */
 	private String coverageName;
-	/**
-	 * 险种代码
-	 */
-	@NotNull(message="险种代码为空")
 	private String coverageCode;
-	/**
-	 * 理赔申请金额
-	 */
-	@Min(value=0,message="申赔金额小于0")
 	private BigDecimal claimAmount;
 	
 	public Long getItemId() {

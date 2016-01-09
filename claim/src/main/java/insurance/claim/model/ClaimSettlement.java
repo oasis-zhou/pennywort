@@ -10,39 +10,12 @@ import javax.validation.constraints.NotNull;
 
 public class ClaimSettlement{
 
-	/**
-	 * Settlement ID(PK)
-	 */
 	private Long settlementId;
-	/**
-	 * Status(1:Open/9:Close)
-	 */
 	private String status;
-	/**
-	 * 付款日期
-	 */
 	private Date approveDate;
-	/**
-	 * 理赔号
-	 */
-	@NotNull(message="赔案号为空")	
 	private String claimNumber;
-	/**
-	 * 险种代码
-	 */
-	@NotNull(message="险种代码为空")
 	private String coverageCode;
-	/**
-	 * 赔款
-	 */
-	@NotNull(message="赔款金额为空")
-	@Min(value=0,message="赔款金额小于0")
 	private BigDecimal settlementAmount;
-	/**
-	 * 收款人信息
-	 */
-	@NotNull(message="收款人信息为空")
-	@Valid
 	private ClaimParty payee;
 	
 	public Long getSettlementId() {
